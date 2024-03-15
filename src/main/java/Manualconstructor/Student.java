@@ -8,7 +8,7 @@ public class Student {
     String courseName;
     String collegeName;
 
-    Student(String name, int age, String batchName, String courseName, String collegeName){
+    public Student(String name, int age, String batchName, String courseName, String collegeName){
         System.out.println("Inside the constructor : " + this.name +" "+name);
         this.name = name;
         this.age = age;
@@ -16,6 +16,16 @@ public class Student {
         this.courseName = courseName;
         this.collegeName = collegeName;
     }
+
+    public Student(Student oldstudent){
+        this.name = oldstudent.name;
+        this.age = oldstudent.age;
+        this.batchName = oldstudent.batchName;
+        this.courseName = oldstudent.courseName;
+        this.collegeName = oldstudent.collegeName;
+    }
+
+
 
     public void display(){
         System.out.println("Name: " + name);

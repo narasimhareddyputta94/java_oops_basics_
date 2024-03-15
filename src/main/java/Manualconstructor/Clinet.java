@@ -5,9 +5,12 @@ public class Clinet {
         Student student1 = new Student("John", 21, "B1", "B.Tech", "IIT");
         student1.display();
 
-        System.out.println("DEBUG");
 
-        Student student2 = new Student("Johni", 21, "B1q", "B.Techq", "IIIT");
+        Student student2 = new Student(student1);
         student2.display();
+
+        student2.name = "Jane";
+         System.out.println("DEBUG");
+
     }
 }
