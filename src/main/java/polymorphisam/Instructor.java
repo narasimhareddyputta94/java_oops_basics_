@@ -61,6 +61,35 @@ public class Instructor extends User{
 
     Instructor(String Username, String Password) {
         super(Username, Password);
+
+    }
+
+    public String getInstructorSpecialization() {
+        return instructorSpecialization;
+    }
+
+    public void setInstructorExperience(String instructorExperience) {
+        this.instructorExperience = instructorExperience;
+    }
+
+    public String getInstructorExperience() {
+        return instructorExperience;
+    }
+
+    public void setInstructorQualification(String instructorQualification) {
+        this.instructorQualification = instructorQualification;
+    }
+
+    public String getInstructorQualification() {
+        return instructorQualification;
+    }
+
+    public void setInstructorDesignation(String instructorDesignation) {
+        this.instructorDesignation = instructorDesignation;
+    }
+
+    public String getInstructorDesignation() {
+        return instructorDesignation;
     }
 
 
