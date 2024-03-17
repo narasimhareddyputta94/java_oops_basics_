@@ -24,7 +24,7 @@ public class A {
         System.out.println("Name: " + name + " Address: " + address + " Age: " + age);
     }
 
-    public void display(String address, String name, int age) {
-        System.out.println("Address: " + address + " Name: " + name + " Age: " + age);
-    }
+//    public void display(String address, String name, int age) {
+//        System.out.println("Address: " + address + " Name: " + name + " Age: " + age);
+//    }
 }
