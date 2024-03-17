@@ -10,7 +10,8 @@ public class Clinet {
         student2.display();
 
         student2.name = "Jane";
-         System.out.println("DEBUG");
+        System.out.println("DEBUG");
+
 
     }
 }
