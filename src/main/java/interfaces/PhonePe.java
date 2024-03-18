@@ -34,8 +34,6 @@ public class PhonePe {
         openBankingAPI.transferMoney("1234", "5678", 100);
         openBankingAPI.withdrawMoney("1234", 100);
 
-        System.out.println("DEBUG");
-
 
         System.out.println(" ");
         System.out.println(" ");
@@ -58,7 +56,6 @@ public class PhonePe {
         openBankingAPI.transferMoney("1234", "5678", 100);
         openBankingAPI.withdrawMoney("1234", 100);
 
-        System.out.println("DEBUG");
 
 
     }
