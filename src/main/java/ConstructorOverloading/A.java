@@ -1,4 +1,4 @@
-package MethodOverloading;
+package ConstructorOverloading;
 
 public class A {
     int age;
