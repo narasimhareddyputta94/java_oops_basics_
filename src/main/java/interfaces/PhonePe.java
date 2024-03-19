@@ -13,17 +13,12 @@ public class PhonePe {
 
         System.out.println("DEBUG");
 
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
+
 
         System.out.println("**********");
         System.out.println("**********");
         System.out.println("**********");
 
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
 
 
         openBankingAPI = new ICICIBankAPI();
@@ -35,17 +30,10 @@ public class PhonePe {
         openBankingAPI.withdrawMoney("1234", 100);
 
 
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
 
         System.out.println("**********");
         System.out.println("**********");
         System.out.println("**********");
-
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
 
 
         openBankingAPI = new razorpay();
