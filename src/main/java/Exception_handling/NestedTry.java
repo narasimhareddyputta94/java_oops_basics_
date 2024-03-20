@@ -1,6 +1,6 @@
 package Exception_handling;
 
-public class Example6 {
+public class NestedTry {
     public static void main(String[] args) {
         try{
             int a = 2;

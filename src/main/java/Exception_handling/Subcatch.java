@@ -1,6 +1,6 @@
 package Exception_handling;
 
-public class Example5 {
+public class Subcatch {
     public static void main(String[] args) {
         try{
             int a = 1;

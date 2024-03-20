@@ -2,7 +2,7 @@ package Exception_handling;
 
 import java.util.Random;
 
-public class Example4 {
+public class Handle_error {
 
     public static void main(String[] args) {
         int a = 0;
