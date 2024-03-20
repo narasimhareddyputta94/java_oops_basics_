@@ -21,6 +21,12 @@ public class Box {
         this.Width = this.Height = this.Depth = len ;
     }
 
+    Box(Box ob){
+        this.Width = ob.Width;
+        this.Height = ob.Height;
+        this.Depth = ob.Depth;
+    }
+
     double volume(){
         double vol = this.Width * this.Height * this.Depth;
         return vol;
