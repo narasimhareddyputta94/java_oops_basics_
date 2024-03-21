@@ -7,6 +7,7 @@ public class ThrowDemo {
         }
         catch(NullPointerException e){
             System.out.println("Caught inside demoproc");
+            throw e;
         }
     }
 
