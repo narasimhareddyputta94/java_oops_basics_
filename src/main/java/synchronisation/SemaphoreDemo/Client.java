@@ -2,6 +2,7 @@ package synchronisation.SemaphoreDemo;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.Semaphore;
 
 public class Client {
     public static void main(String[] args) {
@@ -9,17 +10,20 @@ public class Client {
 
         int MaxSize = 5;
 
-        Producer p1 = new Producer(store , "P1",MaxSize);
-        Producer p2 = new Producer(store , "P2",MaxSize);
-        Producer p3 = new Producer(store , "P3",MaxSize);
-        Producer p4 = new Producer(store , "P4",MaxSize);
-        Producer p5 = new Producer(store , "P5",MaxSize);
+        Semaphore semaphoreproducer = new Semaphore(MaxSize);
+        Semaphore semaphoreconsumer = new Semaphore(0);
 
-        Consumer c1 = new Consumer(store , "C1",MaxSize);
-        Consumer c2 = new Consumer(store , "C2",MaxSize);
-        Consumer c3 = new Consumer(store , "C3",MaxSize);
-        Consumer c4 = new Consumer(store , "C4",MaxSize);
-        Consumer c5 = new Consumer(store , "C5",MaxSize);
+        Producer p1 = new Producer(store , "P1",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Producer p2 = new Producer(store , "P2",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Producer p3 = new Producer(store , "P3",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Producer p4 = new Producer(store , "P4",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Producer p5 = new Producer(store , "P5",MaxSize,semaphoreproducer,semaphoreconsumer);
+
+        Consumer c1 = new Consumer(store , "C1",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Consumer c2 = new Consumer(store , "C2",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Consumer c3 = new Consumer(store , "C3",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Consumer c4 = new Consumer(store , "C4",MaxSize,semaphoreproducer,semaphoreconsumer);
+        Consumer c5 = new Consumer(store , "C5",MaxSize,semaphoreproducer,semaphoreconsumer);
 
         Thread tp1 = new Thread(p1);
         tp1.start();

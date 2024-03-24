@@ -1,5 +1,6 @@
 package synchronisation.SemaphoreDemo;
 import java.util.*;
+import java.util.concurrent.Semaphore;
 
 public class Producer implements Runnable{
 
@@ -9,20 +10,31 @@ public class Producer implements Runnable{
 
     private int MaxSize;
 
-    public Producer(Queue<Shirt> store,String name,int MaxSize){
+    Semaphore semaphoreproducer;
+    Semaphore semaphoreconsumer;
+
+    public Producer(Queue<Shirt> store,String name,int MaxSize,Semaphore semaphoreproducer,Semaphore semaphoreconsumer){
         this.store = store;
         this.name = name;
         this.MaxSize = MaxSize;
+        this.semaphoreproducer = semaphoreproducer;
+        this.semaphoreconsumer = semaphoreconsumer;
     }
 
 
     public void run(){
         while(true) {
-            if (store.size() < 5) {
-                System.out.println("inside producer Current size :" + store.size());
-                store.add(new Shirt());
+                try{
+                    semaphoreproducer.acquire();
+                    System.out.println("inside producer Current size :" + store.size());
+                    store.add(new Shirt());
+                    semaphoreconsumer.release();
+                }
+                catch(Exception e){
+                    e.getMessage();
+                }
+
             }
         }
 
     }
-}
