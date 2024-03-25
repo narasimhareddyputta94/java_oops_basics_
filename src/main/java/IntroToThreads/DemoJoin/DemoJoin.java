@@ -31,9 +31,5 @@ public class DemoJoin {
 
         System.out.println("Main Thread Exiting");
 
-
-
-
-
     }
 }
