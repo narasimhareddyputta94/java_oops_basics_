@@ -48,12 +48,5 @@ public class Client {
         tc5.start();
 
 
-
-
-
-
-
-
-
     }
 }
