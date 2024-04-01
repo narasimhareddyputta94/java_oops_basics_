@@ -28,6 +28,7 @@ public class Client {
         Triplet<String> idNameEmail = new Triplet<>("10704","Narasimha@spr","Narasimha_Reddy");
         Triplet<Integer> idAgeRollNo = new Triplet<>(10704,16,21);
 
+
         List<Triplet<String>> triplets = List.of(idNameEmail,idNameEmail);
         print(triplets);
         System.out.print(avg(idAgeRollNo));
