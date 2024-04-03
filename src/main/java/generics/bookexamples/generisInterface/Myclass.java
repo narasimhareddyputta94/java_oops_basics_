@@ -1,4 +1,5 @@
 package generics.bookexamples.generisInterface;
+import java.util.Queue;
 
 public class Myclass <T extends Comparable<T>> implements MaxMin<T>{
     T[] vals;
