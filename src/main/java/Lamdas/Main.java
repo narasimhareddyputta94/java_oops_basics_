@@ -41,18 +41,26 @@ public class Main {
                         new Student(4, "Smith", 26, 89)
                 )
         );
+//
+//        Comparator<Student > comparator = ( a, b) -> {
+//            if(a.getName().equals(b.getName())){
+//                return 0;
+//        }
+//            if(a.getName().compareTo(b.getName()) > 0){
+//                return -1;
+//        }
+//            return 1;
+//        };
 
-        Comparator<Student > comparator = (Student a,Student b) -> {
+        Collections.sort(students, ( a, b) -> {
             if(a.getName().equals(b.getName())){
                 return 0;
-        }
+            }
             if(a.getName().compareTo(b.getName()) > 0){
                 return -1;
-        }
+            }
             return 1;
-        };
-
-        Collections.sort(students, comparator);
+        }  );
 
         System.out.println(students);
 
