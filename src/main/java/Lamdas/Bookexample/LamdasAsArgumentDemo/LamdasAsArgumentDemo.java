@@ -13,8 +13,8 @@ public class LamdasAsArgumentDemo {
 
         System.out.println("Here is input string: " + inStr);
 
-        outStr = stringOp((str) -> str, inStr);
-        System.out.println("The string reversed: " + outStr);
+        outStr = stringOp((str) -> str.toUpperCase(), inStr);
+        System.out.println("The string in uppercase: " + outStr);
 
         outStr = stringOp((str) -> str.replaceAll(" ",""), inStr);
         System.out.println("The string with spaces removed: " + outStr);
