@@ -28,5 +28,15 @@ public class InatanceMethWithObjectReference {
         count = counter(weekDayHighs2, HighTemp::sameTemp, new HighTemp(12));
 
         System.out.println(count + " days had a high of 12");
+
+        count = counter(weekDayHighs, HighTemp::lessThanTemp, new HighTemp(89));
+
+        System.out.println(count + " days had a high less than 89");
+
+        count = counter(weekDayHighs2, HighTemp::lessThanTemp, new HighTemp(19));
+
+        System.out.println(count + " days had a high less than 19");
+
+
     }
 }
